@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\GioHangController.php||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\GioHangController.php||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\Controller.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\Controller.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 187,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +47,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GioHangController.php",
+              "DocumentMoniker": "D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\GioHangController.php",
+              "RelativeDocumentMoniker": "app\\Http\\Controllers\\GioHangController.php",
+              "ToolTip": "D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\GioHangController.php",
+              "RelativeToolTip": "app\\Http\\Controllers\\GioHangController.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2026-01-05T16:34:19.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Controller.php",
+              "DocumentMoniker": "D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\Controller.php",
+              "RelativeDocumentMoniker": "app\\Http\\Controllers\\Controller.php",
+              "ToolTip": "D:\\HocKi125\\TTCM CongNgheMoi\\DoAnTTCMCNM\\app\\Http\\Controllers\\Controller.php",
+              "RelativeToolTip": "app\\Http\\Controllers\\Controller.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2026-01-05T16:34:34.673Z",
+              "EditorCaption": ""
             }
           ]
         }
