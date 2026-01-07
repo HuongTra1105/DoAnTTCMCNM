@@ -28,7 +28,13 @@
         @endif
     </div>
         @endforeach
-        <a href="#">Giỏ hàng</a>
+        <a href="javascript:void(0)" onclick="moGioHang()" class="cart-icon">
+            Giỏ hàng
+            <span class="cart-count">
+            {{ collect(session('giohang', []))->sum('soluong') }}
+            </span>
+        </a>
+        @include('giohang.GioHang')
         @if(session('user'))
             <div class="menu-item">
                 <span>Xin chào {{ session('user')->Ten }}</span>
@@ -108,18 +114,17 @@
         © 2025 Sell once, survive the whole year
     </div>
 </footer>
+<script src="{{ asset('js/ProductDetail.js') }}"></script>
 <script>
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slides img');
 const dots = document.querySelectorAll('.dot');
-
 function showSlide(index) {
     slides.forEach(s => s.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
 
     slides[index].classList.add('active');
     dots[index].classList.add('active');
-
     currentSlide = index;
 }
 setInterval(() => {

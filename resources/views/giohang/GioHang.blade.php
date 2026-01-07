@@ -4,26 +4,33 @@
         <h4>Giỏ hàng</h4>
         <button class="btn-dong" onclick="dongGioHang()">✕</button>
     </div>
-    @if(session('giohang') && count(session('giohang')) > 0)
-        @php $tong = 0; @endphp
-        @foreach(session('giohang') as $sp)
-            @php $tong += $sp['gia'] * $sp['soluong']; @endphp
-            <div class="gio-item">
-                <img src="{{ $sp['hinh'] }}" alt="">
-                <div>
-                    <p class="ten">{{ $sp['ten'] }}</p>
-                    <small>{{ $sp['mau'] }} - {{ $sp['size'] }}</small>
-                    <p>x{{ $sp['soluong'] }}</p>
-                </div>
-            </div>
-        @endforeach
+ @php $tong = 0; @endphp
+    <div class="gio-hang-body">
+        <div id="gio-hang-list">
+            @if(session('giohang'))
+                @foreach(session('giohang') as $sp)
+                    @php $tong += $sp['gia'] * $sp['soluong']; @endphp
+                    <div class="gio-item" data-key="{{ $sp['id'] }}_{{ $sp['mau'] }}_{{ $sp['size'] }}">
+                        <img src="{{ $sp['hinh'] }}" alt="">
+                        <div>
+                            <p class="ten">{{ $sp['ten'] }}</p>
+                            <small>{{ $sp['mau'] }} - {{ $sp['size'] }}</small>
+                            <p class="soluong">x{{ $sp['soluong'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+        </div>
+        <p id="gio-rong" class="gio-rong"
+           style="{{ session('giohang') && count(session('giohang')) ? 'display:none' : '' }}">
+           Chưa có sản phẩm nào trong giỏ.
+        </p>
+    </div>
+    <div class="gio-hang-footer">
         <div class="gio-tong">
             <span>Tổng cộng</span>
-            <b>{{ number_format($tong) }}đ</b>
+            <b id="gio-hang-tong">{{ number_format($tong) }}đ</b>
         </div>
-        <a href="{{ route('giohang') }}" class="btn-xem">Xem chi tiết</a>
-        <a href="{{ route('thanhtoan') }}" class="btn-mua">Thanh toán</a>
-    @else
-        <p class="gio-rong">Chưa có sản phẩm nào trong giỏ.</p>
-    @endif
+        <a href="{{ route('giohang.chitiet') }}" class="btn-xem">Xem chi tiết</a>
+    </div>
 </div>

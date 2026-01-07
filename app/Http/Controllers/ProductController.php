@@ -18,7 +18,6 @@ class ProductController extends Controller
         $sizes  = $product->options->pluck('size')->filter()->unique();
     }
     $options = Choice::where('Masanpham', $id)->get();
-
     return view('product', compact('product', 'options'));
     }
 }
