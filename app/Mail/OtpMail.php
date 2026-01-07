@@ -13,12 +13,10 @@ class OtpMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $otp;
-
     public function __construct($otp)
     {
         $this->otp = $otp;
     }
-
     public function build()
     {
         return $this->subject('Mã xác thực OTP')

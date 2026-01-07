@@ -12,13 +12,11 @@ class Products extends Model
     {
         return $this->hasMany(AnhSanPham::class, 'Masanpham');
     }
-
     public function mainImage()
     {
         return $this->hasOne(AnhSanPham::class, 'Masanpham')
                     ->where('Anhchinh', 1);
     }
-
     public function choices()
     {
         return $this->hasMany(Choice::class, 'Masanpham');

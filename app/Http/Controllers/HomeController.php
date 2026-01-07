@@ -27,6 +27,4 @@ class HomeController extends Controller
             ->appends(['q' => $request->q]);
         return view('index', compact('categories', 'products'));
     }   
-
-
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="/css/app.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body>
 <header class="header">
@@ -32,7 +34,13 @@
         @endif
     </div>
 @endforeach
-<a href="#">Giỏ hàng</a>
+<a href="javascript:void(0)" onclick="moGioHang()" class="cart-icon">
+    Giỏ hàng
+    <span class="cart-count">
+        {{ collect(session('giohang', []))->sum('soluong') }}
+    </span>
+</a>
+@include('giohang.GioHang')
 @if(session('user'))
             <div class="menu-item">
                 <span>Xin chào {{ session('user')->Ten }}</span>
