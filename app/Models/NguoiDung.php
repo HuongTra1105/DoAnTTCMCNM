@@ -11,7 +11,7 @@ class NguoiDung extends Model
     protected $fillable = [
         'Manguoidung',
         'Ten',
-        'email',
+        'Email',
         'MatKhau',
         'Vaitro',
         'TrangThai',
